@@ -20,7 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0.25"
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -28,8 +30,9 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:text="Registrar Usuario"
-                android:textSize="40sp"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textSize="35sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="0.70"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,7 +41,9 @@
                 android:gravity="center"
                 android:text="Bienvenido a la primer aplicación \nBuffet-UTN"
                 android:textSize="16sp"
+                android:layout_weight="0.30"
                 />
+
         </LinearLayout>
 
         <LinearLayout
@@ -46,7 +51,7 @@
             android:layout_height="90dp"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_weight="0.10"
+            android:layout_weight="0.25"
             android:layout_marginBottom="30dp">
             <ImageView
                 android:layout_width="wrap_content"
@@ -54,53 +59,68 @@
                 android:src="@drawable/no_image"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
-                android:text="Mail"
-                android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"/>
-
-            <EditText
-                android:layout_width="180dp"
-                android:layout_height="18dp"
-                android:layout_gravity="center"
-                android:paddingRight="35dp"
-                android:id="@+id/editText2"
-                android:inputType="text" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="30dp">
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="0.10"
+            android:weightSum="1">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
-                android:text="Clave"
-                android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                android:layout_gravity="top"
+                android:layout_weight="0.50">
 
-            <EditText
-                android:layout_width="180dp"
-                android:layout_height="18dp"
-                android:layout_gravity="right"
-                android:inputType="textPassword" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Mail"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:paddingRight="35dp"
+                    android:id="@+id/editText2"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Clave"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="right"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -109,7 +129,7 @@
             android:orientation="vertical"
             android:gravity="center"
             android:layout_gravity="bottom"
-            android:layout_weight="1">
+            android:layout_weight="0.40">
 
             <Button
                 android:layout_width="180dp"
